@@ -1,0 +1,44 @@
+```
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Shop</title>
+</head>
+<body>
+
+  <h1>🛍️ My Shop</h1>
+
+  <div>
+    <h2>T-Shirt</h2>
+    <p>₹499</p>
+    <button onclick="add('T-Shirt', 499)">Add to Cart</button>
+  </div>
+
+  <div>
+    <h2>Shoes</h2>
+    <p>₹999</p>
+    <button onclick="add('Shoes', 999)">Add to Cart</button>
+  </div>
+
+  <h2>🛒 Cart</h2>
+  <p id="cart">Cart is empty</p>
+  <h3>Total: ₹<span id="total">0</span></h3>
+
+  <script>
+    let total = 0;
+    let items = [];
+
+    function add(name, price) {
+      items.push(name);
+      total += price;
+
+      document.getElementById("cart").innerHTML =
+        items.join("<br>");
+
+      document.getElementById("total").innerHTML = total;
+    }
+  </script>
+
+</body>
+</html>
+```
